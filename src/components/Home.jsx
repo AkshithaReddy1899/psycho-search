@@ -1,17 +1,6 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { getDataFromApi } from '../slices/personSlice';
+import React from 'react';
 
 function Home() {
-  const dispatch = useDispatch();
-  const storeData = useSelector((store) => store.person);
-
-  useEffect(() => {
-    dispatch(getDataFromApi());
-  }, [dispatch]);
-
-  console.log(storeData);
-
   return (
     <div>Home</div>
   );
