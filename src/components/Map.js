@@ -7,6 +7,7 @@ import {
   Sphere,
 } from 'react-simple-maps';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const geoUrl = 'https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json';
 
@@ -29,7 +30,8 @@ function Map(props) {
           ))}
         </Geographies>
         {markers.map(({ id, coordinates }) => (
-          <Marker key={id} coordinates={coordinates}>
+          <Link to='/person' key={id} state= {{id: id}}>
+            <Marker key={id} coordinates={coordinates}>
             <g
               fill="none"
               stroke="#FF5533"
@@ -40,7 +42,8 @@ function Map(props) {
               <circle cx="12" cy="10" r="2" />
               <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z" />
             </g>
-          </Marker>
+            </Marker>
+          </Link>
         ))}
       </ComposableMap>
     </div>

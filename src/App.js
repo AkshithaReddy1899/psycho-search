@@ -7,7 +7,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App border-4">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
