@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { useLocation, Link } from 'react-router-dom';
 
-const ListItem = (props) => {
+const ListItem = () => {
 	const location = useLocation();
 
 	const personId = location.state.id;

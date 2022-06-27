@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Nav from './components/Nav';
 import Home from './components/Home';
 import List from './components/List';
 import ListItem from './components/ListItem';
@@ -7,8 +8,9 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App border-4">
+    <div className="App">
       <BrowserRouter>
+        <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/list" element={<List />} />
