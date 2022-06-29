@@ -1,53 +1,97 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import ScaleLoader from 'react-spinners/ScaleLoader';
 
-const ListItem = () => {
-	const location = useLocation();
+function ListItem() {
+  const location = useLocation();
 
-	const personId = location.state.id;
-	
-	const storeData = useSelector((store) => store.person);
-	const person = [];
+  const personId = location.state.id;
 
-	if (storeData.length > 0 ) {
-		storeData.forEach((obj) => {
-			const data = obj.data.person;
-			data.forEach((item) => {
-				if(item.id === personId) {
-					person.push(item);
-				}else {
-					const obj = {};
-					person.push(obj);
-				}
-			});
-		});
-	}
-	
-	return (
-		<div>
-			<Link to="/list">Back</Link>
-			{
-				person.map((item) => (
-					(item.id) ? (
-						<div key={item.id} className="container border">
-							<img src={item.image} alt={item.name} />
-							<h3>{item.name}</h3>
-							<p><b>Crime: </b>{item.crime}</p>
-							<p><b>Region: </b>{item.country},&nbsp;{item.state}</p>
-							<p><b>Victims: </b>{item.victims}</p>
-							<p><b>Last words: </b>{item.last_words}</p>
-							<p><b>Date of birth: </b>{item.d_o_b}</p>
-							<p><b>Date of death: </b>{item.d_o_d}</p>
-							<p><b>Died at the age of: </b>{item.age_of_death}</p>
-							<p><b>Death: </b>{item.death}</p>
-							<p><b>More details: </b>{item.link}</p>
-						</div>
-					) : (<p>OOPS! Something went wrong try again</p>)
-				))
-			}
-		</div>
-	)
-};
+  const storeData = useSelector((store) => store.person);
+  const person = [];
+
+  if (storeData.data.length > 0) {
+    storeData.data.forEach((obj) => {
+      const data = obj.data.person;
+      data.forEach((item) => {
+        if (item.id === personId) {
+          person.push(item);
+        } else {
+          const obj = {};
+          person.push(obj);
+        }
+      });
+    });
+  }
+
+  return (
+    <div>
+      {
+        person.length > 0 ? (
+          person.map((item) => (
+            <div key={item.id} className="flex flex-row justify-center items-center p-16 m-12 w-3/4 mx-auto rounded-lg shadow-lg shadow-slate-600">
+              <div className="border p-4">
+                <div className="flex justify-center items-center" style={{ width: '250px', height: 'auto' }}>
+                  <img src={item.image} alt={item.name} style={{ width: '250px', height: 'auto' }} />
+                </div>
+                <h1 className="p-4 text-2xl">{item.name}</h1>
+              </div>
+              <div className="text-left text-base px-16">
+                <p className="p-2">
+                  <b className="text-slate-400">Other Names: </b>
+                  {item.other_names}
+                </p>
+                <p className="p-2">
+                  <b className="text-slate-400">Crime: </b>
+                  {item.crime}
+                </p>
+                <p className="p-2">
+                  <b className="text-slate-400">Region: </b>
+                  {item.country}
+                  ,&nbsp;
+                  {item.state}
+                </p>
+                <p className="p-2">
+                  <b className="text-slate-400">Weapons: </b>
+                  {item.weapons}
+                </p>
+                <p className="p-2">
+                  <b className="text-slate-400">Victims: </b>
+                  {item.victims}
+                </p>
+                <p className="p-2">
+                  <b className="text-slate-400">Last words: </b>
+                  {item.last_words}
+                </p>
+                <div className="flex">
+                  <p className="p-2">
+                    <b className="text-slate-400">Date of birth: </b>
+                    {item.d_o_b}
+                  </p>
+                  <p className="p-2">
+                    <b className="text-slate-400">Date of death: </b>
+                    {item.d_o_d}
+                  </p>
+                </div>
+                <p className="p-2">
+                  <b className="text-slate-400">Died at the age of: </b>
+                  {item.age_of_death}
+                </p>
+                <p className="p-2">
+                  <b className="text-slate-400">Death: </b>
+                  {item.death}
+                </p>
+                <p className="p-2">
+                  <b className="text-slate-400">More details: </b>
+                  <a href={item.link} className="underline" target="_blank" rel="noreferrer">Wiki</a>
+                </p>
+              </div>
+            </div>
+          ))) : (<p><ScaleLoader size="20px" color="white" /></p>)
+      }
+    </div>
+  );
+}
 
 export default ListItem;

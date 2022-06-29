@@ -4,7 +4,6 @@ import {
   Geographies,
   Geography,
   Marker,
-  Sphere,
 } from 'react-simple-maps';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
@@ -29,7 +28,7 @@ function Map(props) {
         </Geographies>
         {markers.map(({ id, coordinates }) => (
           <Link to="/person" key={id} state={{ id }}>
-            <Marker key={id} coordinates={coordinates}>
+            <Marker key={id} data-bs-hover="popover" data-bs-title='${id}' coordinates={coordinates}>
               <g
                 fill="none"
                 stroke="#FF5533"
