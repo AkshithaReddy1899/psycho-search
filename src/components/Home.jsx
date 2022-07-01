@@ -34,7 +34,7 @@ function Home() {
   return (
     <div className="px-16 pt-6 pb-16">
       <div className="container text-center px-16 m-2">
-        <h2 className="text-3xl p-4">Are psychopaths made or born ??</h2>
+        <h2 className="text-3xl p-4">Famous psychopaths the world has seen</h2>
         <p className="text-left pb-12 text-lg m-auto place-content-center leading-7 px-6">
           I guess we will never know the answer to this, but one thing is for sure a lot of them go unnoticed they live in between us like one of us but behind the closed curtains you never know what is happening.  In the past decade, the world hasn&apos;t seen any major incident, but does that imply that we don&apos;t have any of them living between us or does it point towards them being so smart that we weren&apos;t able to catch one.
           <br />
