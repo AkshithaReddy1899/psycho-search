@@ -11,11 +11,11 @@ import { Link } from 'react-router-dom';
 const geoUrl = 'https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json';
 
 function Map(props) {
-  const { markers } = props;
+  const { markers, setTooltipContent } = props;
 
   return (
     <div className="container-lg">
-      <ComposableMap projection="geoMercator" width={950} height={650} projectionConfig={{ rotate: [-10, 0, 0], scale: 147 }}>
+      <ComposableMap projection="geoMercator" width={950} height={650} projectionConfig={{ rotate: [-10, 0, 0], scale: 147 }} data-tip="">
         <Geographies geography={geoUrl}>
           {({ geographies }) => geographies.map((geo) => (
             <Geography
@@ -26,9 +26,17 @@ function Map(props) {
             />
           ))}
         </Geographies>
-        {markers.map(({ id, coordinates }) => (
+        {markers.map(({ id, name, coordinates }) => (
           <Link to="/person" key={id} state={{ id }}>
-            <Marker key={id} data-bs-hover="popover" data-bs-title='${id}' coordinates={coordinates}>
+            <Marker
+              coordinates={coordinates}
+              onMouseEnter={() => {
+                setTooltipContent(name);
+              }}
+              onMouseLeave={() => {
+                setTooltipContent('');
+              }}
+            >
               <g
                 fill="none"
                 stroke="#FF5533"
@@ -63,6 +71,7 @@ Map.propTypes = {
     name: PropTypes.string,
     id: PropTypes.number,
   })),
+  setTooltipContent: PropTypes.func.isRequired,
 };
 
 export default Map;

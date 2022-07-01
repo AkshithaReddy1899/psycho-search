@@ -1,8 +1,9 @@
 /* eslint-disable max-len */
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import RingLoader from 'react-spinners/RingLoader';
 import { Link } from 'react-router-dom';
+import ReactTooltip from 'react-tooltip';
 import { getDataFromApi } from '../redux/person';
 import Map from './Map';
 
@@ -28,6 +29,8 @@ function Home() {
     });
   }
 
+  const [content, setContent] = useState('');
+
   return (
     <div className="px-16 pt-6 pb-16">
       <div className="container text-center px-16 m-2">
@@ -44,7 +47,12 @@ function Home() {
       </div>
       <div id="map" className="border-2 mt-8 x-0 place-content-center" style={{ width: '950px', height: '650px', margin: 'auto' }}>
         {
-          markers.length > 0 ? <Map markers={markers} /> : <p className="flex justify-center items-center m-auto mt-36"><RingLoader size="250px" color="white" /></p>
+          markers.length > 0 ? (
+            <div>
+              <Map markers={markers} setTooltipContent={setContent} />
+              <ReactTooltip>{content}</ReactTooltip>
+            </div>
+          ) : <p className="flex justify-center items-center m-auto mt-36"><RingLoader size="250px" color="white" /></p>
         }
       </div>
       <br />
