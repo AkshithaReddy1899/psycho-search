@@ -6,9 +6,6 @@ import ReactPlayer from 'react-player/lazy';
 
 function ListItem() {
   const location = useLocation();
-
-  const personId = location.state.id;
-
   const storeData = useSelector((store) => store.person);
   const person = [];
 
@@ -16,7 +13,7 @@ function ListItem() {
     storeData.data.forEach((obj) => {
       const data = obj.data.person;
       data.forEach((item) => {
-        if (item.id === personId) {
+        if (item.id === location.state.id) {
           person.push(item);
         } else {
           const obj = {};

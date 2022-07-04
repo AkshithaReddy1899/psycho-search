@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Home matched snapshot 1`] = `
+<div>
+  <ul
+    className="flex flex-wrap flex-row justify-around align-center m-8"
+  >
+    <div
+      className="center p-20"
+    >
+      <span
+        style={
+          Object {
+            "display": "inherit",
+          }
+        }
+      >
+        <span
+          style={
+            Object {
+              "animation": "react-spinners-RiseLoader-odd 1s 0s infinite cubic-bezier(0.15, 0.46, 0.9, 0.6)",
+              "animationFillMode": "both",
+              "backgroundColor": "white",
+              "borderRadius": "100%",
+              "display": "inline-block",
+              "height": "25px",
+              "margin": "2px",
+              "width": "25px",
+            }
+          }
+        />
+        <span
+          style={
+            Object {
+              "animation": "react-spinners-RiseLoader-even 1s 0s infinite cubic-bezier(0.15, 0.46, 0.9, 0.6)",
+              "animationFillMode": "both",
+              "backgroundColor": "white",
+              "borderRadius": "100%",
+              "display": "inline-block",
+              "height": "25px",
+              "margin": "2px",
+              "width": "25px",
+            }
+          }
+        />
+        <span
+          style={
+            Object {
+              "animation": "react-spinners-RiseLoader-odd 1s 0s infinite cubic-bezier(0.15, 0.46, 0.9, 0.6)",
+              "animationFillMode": "both",
+              "backgroundColor": "white",
+              "borderRadius": "100%",
+              "display": "inline-block",
+              "height": "25px",
+              "margin": "2px",
+              "width": "25px",
+            }
+          }
+        />
+        <span
+          style={
+            Object {
+              "animation": "react-spinners-RiseLoader-even 1s 0s infinite cubic-bezier(0.15, 0.46, 0.9, 0.6)",
+              "animationFillMode": "both",
+              "backgroundColor": "white",
+              "borderRadius": "100%",
+              "display": "inline-block",
+              "height": "25px",
+              "margin": "2px",
+              "width": "25px",
+            }
+          }
+        />
+        <span
+          style={
+            Object {
+              "animation": "react-spinners-RiseLoader-odd 1s 0s infinite cubic-bezier(0.15, 0.46, 0.9, 0.6)",
+              "animationFillMode": "both",
+              "backgroundColor": "white",
+              "borderRadius": "100%",
+              "display": "inline-block",
+              "height": "25px",
+              "margin": "2px",
+              "width": "25px",
+            }
+          }
+        />
+      </span>
+    </div>
+  </ul>
+</div>
+`;

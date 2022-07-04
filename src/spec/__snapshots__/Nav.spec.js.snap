@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Home matched snapshot 1`] = `
+<div
+  className="p-8"
+>
+  <a
+    className="mx-8 text-lg"
+    href="/"
+    onClick={[Function]}
+  >
+    Home
+  </a>
+  <a
+    className="mx-8 text-lg"
+    href="/list"
+    onClick={[Function]}
+  >
+    Browse
+  </a>
+  <a
+    className="mx-8 text-lg"
+    href="/#map"
+    onClick={[Function]}
+  >
+    Map
+  </a>
+  <a
+    className="mx-8 text-lg"
+    href="/disclamer"
+    onClick={[Function]}
+  >
+    Disclamer
+  </a>
+</div>
+`;

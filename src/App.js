@@ -4,6 +4,7 @@ import Nav from './components/Nav';
 import Home from './components/Home';
 import List from './components/List';
 import ListItem from './components/ListItem';
+import Disclamer from './components/Disclamer';
 import './App.css';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/list" element={<List />} />
           <Route path="/person" element={<ListItem />} />
+          <Route path="/disclamer" element={<Disclamer />} />
         </Routes>
       </BrowserRouter>
     </div>

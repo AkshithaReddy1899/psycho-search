@@ -8,6 +8,7 @@ function Nav() {
       <Link to="/" className="mx-8 text-lg">Home</Link>
       <Link to="/list" className="mx-8 text-lg">Browse</Link>
       <HashLink to="/#map" className="mx-8 text-lg">Map</HashLink>
+      <Link to="/disclamer" className="mx-8 text-lg">Disclamer</Link>
     </div>
   );
 }

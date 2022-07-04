@@ -63,6 +63,7 @@ Map.defaultProps = {
       id: 0,
     },
   ],
+  setTooltipContent: '...',
 };
 
 Map.propTypes = {
@@ -71,7 +72,7 @@ Map.propTypes = {
     name: PropTypes.string,
     id: PropTypes.number,
   })),
-  setTooltipContent: PropTypes.func.isRequired,
+  setTooltipContent: PropTypes.string,
 };
 
 export default Map;
