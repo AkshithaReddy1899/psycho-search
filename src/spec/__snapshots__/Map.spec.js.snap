@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Home matched snapshot 1`] = `
+<div
+  className="container-lg"
+>
+  <svg
+    className="rsm-svg "
+    data-tip=""
+    viewBox="0 0 950 650"
+  >
+    <g
+      className="rsm-geographies "
+    />
+    <a
+      className="border"
+      href="/person"
+      onClick={[Function]}
+    >
+      <g
+        className="rsm-marker m-2 border"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        transform="translate(NaN, NaN)"
+      >
+        <circle
+          fill="#FF5533"
+          r={5}
+        />
+      </g>
+    </a>
+  </svg>
+</div>
+`;
