@@ -42,6 +42,16 @@ exports[`Home Home matched snapshot 1`] = `
       </ul>
     </div>
   </div>
+  <h2
+    className="text-3xl p-4"
+  >
+    Few of world's best known psychopaths
+  </h2>
+  <p
+    className="text-slate-400 p-2"
+  >
+    Click on the marker to know more about each of them
+  </p>
   <div
     className="border-2 mt-8 x-0 place-content-center"
     id="map"

@@ -4,7 +4,7 @@ import axios from 'axios';
 const GET_DATA_SUCCESS = 'persons/GET_DATA_SUCCESS';
 const GET_DATA = 'persons/GET_DATA';
 const GET_DATA_FAILURE = 'person/GET_DATA_FAILURE';
-const url = 'http://127.0.0.1:3001/v1/people';
+const url = 'https://psycho-search-api.herokuapp.com/v1/people';
 
 const initialState = {
   data: [],

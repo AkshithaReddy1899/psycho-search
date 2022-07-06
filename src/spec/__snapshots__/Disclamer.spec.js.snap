@@ -12,12 +12,10 @@ exports[`Home Home matched snapshot 1`] = `
   <div
     className="pt-6"
   >
-    Hello, I hope you are doing well.
-    <br />
     <p
       className="text-left text-2xl leading-10"
     >
-      All the information presented here is from the internet, which might or might not be true. My intention behind this web application is purely educational. However, you can always mail me at
+      All the information presented here is from the internet, which might or might not be true. My intention behind this web application is purely educational. Also, these are not the only psychopaths in the world. I will be adding more data in the near future. However, you can always e-mail me at
       <a
         className="text-green-600 decoration-solid"
         href="mailto:akshithareddy1899@gmail.com"

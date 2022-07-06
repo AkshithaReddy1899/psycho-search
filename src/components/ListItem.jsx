@@ -15,9 +15,6 @@ function ListItem() {
       data.forEach((item) => {
         if (item.id === location.state.id) {
           person.push(item);
-        } else {
-          const obj = {};
-          person.push(obj);
         }
       });
     });

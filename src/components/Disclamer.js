@@ -6,10 +6,8 @@ function Disclamer() {
     <div className="m-6 p-4 w-1/2 mx-auto font-serif leading-8">
       <h2 className="text-2xl text-red-500">Warning</h2>
       <div className="pt-6">
-        Hello, I hope you are doing well.
-        <br />
         <p className="text-left text-2xl leading-10">
-          All the information presented here is from the internet, which might or might not be true. My intention behind this web application is purely educational. However, you can always mail me at
+          All the information presented here is from the internet, which might or might not be true. My intention behind this web application is purely educational. Also, these are not the only psychopaths in the world. I will be adding more data in the near future. However, you can always e-mail me at
           <a href="mailto:akshithareddy1899@gmail.com" className="text-green-600 decoration-solid" onClick={() => navigator.clipboard.writeText('akshithareddy1899@gmail.com')}> akshithareddy1899@gmail.com </a>
           <br />
           <ul className="list-disc text-lg leading-8 p-8">

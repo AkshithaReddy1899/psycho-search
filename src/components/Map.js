@@ -27,8 +27,9 @@ function Map(props) {
           ))}
         </Geographies>
         {markers.map(({ id, name, coordinates }) => (
-          <Link to="/person" key={id} state={{ id }}>
+          <Link to="/person" className="border" key={id} state={{ id }}>
             <Marker
+              className="m-2 border"
               coordinates={coordinates}
               onMouseEnter={() => {
                 setTooltipContent(name);
@@ -37,16 +38,7 @@ function Map(props) {
                 setTooltipContent('');
               }}
             >
-              <g
-                fill="none"
-                stroke="#FF5533"
-                strokeWidth="3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <circle cx="12" cy="10" r="2" />
-                <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z" />
-              </g>
+              <circle r={5} fill="#FF5533" />
             </Marker>
           </Link>
         ))}

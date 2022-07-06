@@ -32,8 +32,8 @@ function List() {
             key={item.id}
             state={{ id: item.id }}
           >
-            <li key={item.id} className="container bg-zinc-700 flex justify-center align-center flex-col w-80 m-2 shadow-2xl rounded-md">
-              <img src={item.image} className="w-40 mx-auto mt-3 border-2" alt={item.name} />
+            <li key={item.id} className="container bg-zinc-700 flex justify-center align-center flex-col w-96 m-8 shadow-2xl rounded-md">
+              <img src={item.image} className="h-56 mx-auto mt-3 border-2" alt={item.name} />
               <h3 className="p-3"><b>{item.name}</b></h3>
               <div className="text-left m-4">
                 <p>

@@ -45,6 +45,8 @@ function Home() {
           </ul>
         </div>
       </div>
+      <h2 className="text-3xl p-4">Few of world&apos;s best known psychopaths</h2>
+      <p className="text-slate-400 p-2">Click on the marker to know more about each of them</p>
       <div id="map" className="border-2 mt-8 x-0 place-content-center" style={{ width: '950px', height: '650px', margin: 'auto' }}>
         {
           markers.length > 0 ? (
