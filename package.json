@@ -1,6 +1,10 @@
 {
-  "name": "front-end",
+  "name": "psycho-search",
   "version": "0.1.0",
+  "description": "PsychoSearch is a educational single-page, desktop application that lets you see famous psychopaths around the world and learn more about them.",
+  "engines": {
+    "node": "16.10.0"
+  },
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",

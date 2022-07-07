@@ -8,7 +8,7 @@ import {
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-const geoUrl = 'https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json';
+const geoUrl = 'https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json';
 
 function Map(props) {
   const { markers, setTooltipContent } = props;
@@ -55,7 +55,6 @@ Map.defaultProps = {
       id: 0,
     },
   ],
-  setTooltipContent: '...',
 };
 
 Map.propTypes = {
@@ -64,7 +63,7 @@ Map.propTypes = {
     name: PropTypes.string,
     id: PropTypes.number,
   })),
-  setTooltipContent: PropTypes.string,
+  setTooltipContent: PropTypes.func.isRequired,
 };
 
 export default Map;
