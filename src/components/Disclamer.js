@@ -7,7 +7,7 @@ function Disclamer() {
       <h2 className="text-2xl text-red-500">Warning</h2>
       <div className="pt-6">
         <p className="text-left text-2xl leading-10">
-          All the information presented here is from the internet, which might or might not be true. My intention behind this web application is purely educational. Also, these are not the only psychopaths in the world. I will be adding more data in the near future. However, you can always e-mail me at
+          All the information presented here comes from the internet, which may or may not be true. My intention behind this web application is purely educational. Moreover, they are not the only psychopaths in the world. I will add more data in the near future. However, you can always email me at
           <a href="mailto:akshithareddy1899@gmail.com" className="text-green-600 decoration-solid" onClick={() => navigator.clipboard.writeText('akshithareddy1899@gmail.com')}> akshithareddy1899@gmail.com </a>
           <br />
           <ul className="list-disc text-lg leading-8 p-8">
