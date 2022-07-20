@@ -12,7 +12,6 @@ const geoUrl = 'https://raw.githubusercontent.com/deldersveld/topojson/master/wo
 
 function Map(props) {
   const { markers, setTooltipContent } = props;
-
   return (
     <div className="container-lg">
       <ComposableMap projection="geoMercator" width={950} height={650} projectionConfig={{ rotate: [-10, 0, 0], scale: 147 }} data-tip="">
@@ -55,6 +54,7 @@ Map.defaultProps = {
       id: 0,
     },
   ],
+  setTooltipContent: '',
 };
 
 Map.propTypes = {
@@ -63,7 +63,7 @@ Map.propTypes = {
     name: PropTypes.string,
     id: PropTypes.number,
   })),
-  setTooltipContent: PropTypes.func.isRequired,
+  setTooltipContent: PropTypes.func,
 };
 
 export default Map;
