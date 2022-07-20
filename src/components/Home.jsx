@@ -4,6 +4,7 @@ import RingLoader from 'react-spinners/RingLoader';
 import ReactTooltip from 'react-tooltip';
 import { getDataFromApi } from '../redux/person';
 import Map from './Map';
+import { ReactComponent as Svg } from '../home.svg';
 
 function Home() {
   const dispatch = useDispatch();
@@ -31,19 +32,23 @@ function Home() {
 
   return (
     <div className="px-16 pt-6 pb-16">
-      <div className="container text-center px-16 m-2">
-        <h3 className="text-2xl p-2">Fun facts about Psychopaths</h3>
-        <div className="text-center w-2/5 p-8 mx-auto">
-          <ul className="text-left pb-12 text-lg m-auto place-content-center list-disc leading-7 px-6">
-            <li>Roughly one in every 200 of us is a psychopath.</li>
-            <li>Psychopaths are people who do not recognize fear.</li>
-            <li>People with psychopathy don&apos;t learn from their mistakes.</li>
-            <li>Psychopaths don&apos;t respond to yawns well.</li>
-            <li>People with psychopathic tendencies post tons of selfies.</li>
-            <li>One of the classic traits of a psychopath is emotional poverty.</li>
-            <li>Psychopaths are more likely to be night owls.</li>
-          </ul>
+      <div className="">
+        <Svg className="mx-auto w-80 h-80" />
+        <div className="w-1/2 mx-auto py-8">
+          <p className="text-2xl">PsychoSearch is an online encyclopedia that aims to demystify psychopaths and their behavior by providing information about their motivations and intensions. They will also give you access to a large database of psychopaths for you to browse through.</p>
         </div>
+      </div>
+      <div className="text-red-500 border border-red-200 text-1xl p-8 text-left my-20">
+        <h2 className="text-2xl">Warning</h2>
+        <br />
+        <p>
+          This app contains violent disturbing content. We&apos;re not going to ask you to change anything about your browsing habits or the way you use these products, but we want you to know that these products are intended for responsible adult audiences only, and they should never be used by children or young adults under the age of 18.
+
+          If your child is old enough to read this message, please let them know that if they use these products, it is at their own risk and responsibility. If they get in trouble with their parents for using them, it&apos;s not our responsibility.
+
+          We appreciate your understanding and cooperation!
+
+        </p>
       </div>
       <h2 className="text-3xl p-4">Few of world&apos;s best known psychopaths</h2>
       <p className="text-slate-400 p-2">Click on the marker to know more about each of them</p>
