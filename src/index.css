@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Serif+Georgian&display=swap');
 body {
   margin: 0;
   font-family:
@@ -20,4 +20,52 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #282c34;
   color: whitesmoke;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+  height: 300px;
+}
+
+/* #root {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1em;
+  font-family: sans-serif;
+  color: #333;
+  /* background-color: #f3e4d7; */
+  /* background-color: red; */
+/* } */ 
+
+/* height of the container */
+.leaflet-container {
+  height: 400px;
+  width: 90%;
+  border-radius: 2rem;
+  /* overflow: unset; */
+}
+
+.tile-layer-class {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cluster-icon {
+  background-color: #333;
+  height: 2em;
+  width: 2em;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  box-shadow: 0 0 0px 5px #fff;
 }

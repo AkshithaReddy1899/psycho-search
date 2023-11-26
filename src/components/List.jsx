@@ -1,32 +1,13 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import RiseLoader from 'react-spinners/RiseLoader';
-import { getDataFromApi } from '../redux/person';
+import { data } from '../assets/data';
 
 function List() {
-  const dispatch = useDispatch();
-  const storeData = useSelector((store) => store.person);
-
-  useEffect(() => {
-    dispatch(getDataFromApi());
-  }, []);
-
-  const personList = [];
-
-  if (storeData.data.length > 0) {
-    storeData.data.forEach((obj) => {
-      const data = obj.data.person;
-      data.forEach((item) => {
-        personList.push(item);
-      });
-    });
-  }
-
   return (
     <div>
       <ul className="flex flex-wrap flex-row justify-around align-center m-8">
-        {(personList.length) !== 0 ? (personList.map((item) => (
+        {(data.length) !== 0 ? (data.map((item) => (
           <Link
             to="/person"
             key={item.id}
