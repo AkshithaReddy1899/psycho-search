@@ -12,6 +12,22 @@ import Disclamer from './components/Disclamer';
 import './App.css';
 
 function App() {
+  fetch('https://willowy-creponne-213742.netlify.app/.netlify/functions/api/order')
+    .then((response) => {
+      if (response.ok) {
+        console.log(response.json);
+        return response.json(); // Parse the response data as JSON
+      }
+      throw new Error('API request failed');
+    })
+    .then((data) => {
+    // Process the response data here
+      console.log(data); // Example: Logging the data to the console
+    })
+    .catch((error) => {
+    // Handle any errors here
+      console.error(error); // Example: Logging the error to the console
+    });
   const isNotMobile = window.screen.width > 600;
   const [showModal, setShowModal] = React.useState(false);
   return (
